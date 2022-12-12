@@ -1,0 +1,11 @@
+*{margin: 0.5%}
+
+html{
+  height: 100%;
+}
+
+body{
+  height: 100%;
+  background: linear-gradient(white, grey);
+  font-family:sans-serif;
+}
