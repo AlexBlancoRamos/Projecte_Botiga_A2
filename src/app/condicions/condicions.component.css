@@ -1,0 +1,13 @@
+article{
+  height: 70%;
+  width: 100%;
+  background-color: white;
+  float: left;
+  border: solid black 1px;
+}
+
+#condiciones, #titolcondi{
+  margin-right: 20%;
+  margin-left: 20%;
+  text-align: center;
+}

@@ -1,0 +1,62 @@
+article{
+  display: inline-block;
+  justify-content:center;
+  width: 100%;
+  height: 83%;
+  margin-bottom: -12%;
+}
+
+.carro {
+  overflow: hidden;
+  height: 83%;
+  padding: 0px;
+  background-color: black;
+}
+
+.carro li {
+  width: 100%;
+  list-style: none;
+  margin: 0px;
+  border-radius: 20px;
+}
+
+.carro ul {
+  display: flex;
+  animation: cambio 20s infinite linear;
+  width: 400%;
+  height: 20%;
+  margin: 0px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.carro img {
+  width: 99%;
+  height: 35%;
+  margin: 0px;
+  border-radius: 20px;
+}
+
+@keyframes cambio{
+  0%{margin-left: 0%;}
+  20%{margin-left: 0%;}
+
+  25%{margin-left: -100%;}
+  45%{margin-left: -100%;}
+
+  50%{margin-left: -200%;}
+  70%{margin-left: -200%;}
+
+  75%{margin-left: -300%;}
+  100%{margin-left: -300%;}
+}
+
+li ul {
+  align-items: center;
+}
+
+#explicacio{
+  margin-right: 20%;
+  margin-left: 20%;
+  text-align: center;
+}

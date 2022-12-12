@@ -1,0 +1,82 @@
+
+#titol{
+  margin-top: 3%;
+  margin-left: 3%;
+
+}
+#fotocistella1{
+  float: left;
+  margin :2%;
+  width: 15%;
+  height: 70%;
+}
+#divproducte1{
+  float: left;
+  margin-top: 2%;
+  margin-left: 3%;
+  border:solid grey 1px;
+  display: inline-block;
+  background-color: white;
+  width: 80%;
+  height:40%;
+}
+#nomproducte{
+  float: left;
+  margin-top: 2%;
+}
+
+#inputpro{
+  margin-left: 55%;
+  float: left;
+  margin-top: 2%;
+}
+
+#preuproducte{
+  float: left;
+  color: red;
+  margin-top: 3%;
+}
+
+#chekbox{
+  margin-top: 12%;
+}
+
+
+#resumen{
+  float: left;
+  margin-top: 2%;
+  border:solid grey 1px;
+  background-color: white;
+  width: 15%;
+  height:40%;
+}
+#resumen1 {
+  margin-left: 7%;
+  margin-top: 7%;
+}
+
+#subtotal {
+  margin-left: 7%;
+  margin-top: 7%;
+  border-bottom: dot-dash grey 1px;
+}
+
+#punts{
+  margin-top: 7%;
+}
+#envio{
+  margin-left: 7%;
+  margin-top: 7%;
+}
+#total{
+  margin-left: 7%;
+  margin-top: 7%;
+}
+
+article{
+  height: 70%;
+  width: 100%;
+  background-color: white;
+  float: left;
+  border: solid black 1px;
+}
