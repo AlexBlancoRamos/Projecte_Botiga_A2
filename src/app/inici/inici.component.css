@@ -8,7 +8,7 @@ article{
 
 .carro {
   overflow: hidden;
-  height: 83%;
+  height: 500px;
   padding: 0px;
   background-color: black;
 }
@@ -28,11 +28,12 @@ article{
   margin: 0px;
   padding: 10px;
   border-radius: 20px;
+
 }
 
 .carro img {
   width: 99%;
-  height: 35%;
+  height: 478%;
   margin: 0px;
   border-radius: 20px;
 }
