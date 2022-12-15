@@ -10,6 +10,7 @@ import { CistellaComponent } from './cistella/cistella.component';
 import { CondicionsComponent } from './condicions/condicions.component';
 import { ContacteComponent } from './contacte/contacte.component';
 import { RegistreComponent } from './registre/registre.component';
+import {RouterOutlet} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { RegistreComponent } from './registre/registre.component';
     RegistreComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterOutlet
   ],
   providers: [],
   bootstrap: [AppComponent]
