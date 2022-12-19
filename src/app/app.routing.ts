@@ -12,6 +12,7 @@ import { RegistreComponent } from './registre/registre.component';
 import {RouterOutlet} from "@angular/router";
 
 const routes: Routes =[
+  {path: '', redirectTo: '/inici', pathMatch: 'full'},
   {path: 'inici', component: IniciComponent},
   {path: 'menu', component: MenuComponent},
   {path: 'peu', component: PeuComponent},
