@@ -4,6 +4,7 @@ header{
   background-color: white;
   display: inline-block;
   border: solid black 1px;
+  margin-left: -16px;
 }
 
 nav{ width: 100%;
@@ -27,10 +28,26 @@ nav{ width: 100%;
   display:inline-block;
 }
 
+#nom_usuario{
+  background-color: white;
+  margin-left: 88%;
+}
+
+#logout{
+  float: right;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 1px;
+  text-align: center;
+  align-items: center;
+  background-color:white;
+  border: solid black 1px;
+}
 
 #register{
   float: right;
-  margin-right: 10%;
+  margin-right: 5%;
   list-style: none;
   display: flex;
   justify-content: space-around;
@@ -99,4 +116,17 @@ li{
   font-size: 20px;
   border-left: 4px solid #111d5e;
 
+}
+
+#logout{
+  float: right;
+  margin-right: 5%;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 1px;
+  text-align: center;
+  align-items: center;
+  background-color:white;
+  border: solid black 1px;
 }

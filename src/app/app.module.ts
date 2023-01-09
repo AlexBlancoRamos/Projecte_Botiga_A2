@@ -23,7 +23,7 @@ import {RouterOutlet} from "@angular/router";
     CistellaComponent,
     CondicionsComponent,
     ContacteComponent,
-    RegistreComponent
+    RegistreComponent,
   ],
   imports: [
     BrowserModule,
