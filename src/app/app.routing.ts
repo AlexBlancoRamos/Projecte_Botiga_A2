@@ -5,11 +5,14 @@ import { MenuComponent } from './menu/menu.component';
 import { PeuComponent } from './peu/peu.component';
 import { IniciComponent } from './inici/inici.component';
 import { CatalegComponent } from './cataleg/cataleg.component';
+import { OfertesComponent } from './ofertes/ofertes.component';
+import { PcComponent } from './pc/pc.component';
+import { PerifericsComponent } from './periferics/periferics.component';
 import { CistellaComponent } from './cistella/cistella.component';
 import { CondicionsComponent } from './condicions/condicions.component';
 import { ContacteComponent } from './contacte/contacte.component';
 import { RegistreComponent } from './registre/registre.component';
-import {RouterOutlet} from "@angular/router";
+import { RouterOutlet} from "@angular/router";
 
 const routes: Routes =[
   {path: '', redirectTo: '/inici', pathMatch: 'full'},
@@ -17,6 +20,9 @@ const routes: Routes =[
   {path: 'menu', component: MenuComponent},
   {path: 'peu', component: PeuComponent},
   {path: 'cataleg', component: CatalegComponent},
+  {path: 'ofertes', component: OfertesComponent},
+  {path: 'pc', component: PcComponent},
+  {path: 'periferics', component: PerifericsComponent},
   {path: 'cistella', component: CistellaComponent},
   {path: 'condicions', component: CondicionsComponent},
   {path: 'contacte', component: ContacteComponent},

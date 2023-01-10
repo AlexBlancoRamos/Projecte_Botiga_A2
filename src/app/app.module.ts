@@ -11,7 +11,10 @@ import { CistellaComponent } from './cistella/cistella.component';
 import { CondicionsComponent } from './condicions/condicions.component';
 import { ContacteComponent } from './contacte/contacte.component';
 import { RegistreComponent } from './registre/registre.component';
-import {RouterOutlet} from "@angular/router";
+import { RouterOutlet} from "@angular/router";
+import { OfertesComponent } from './ofertes/ofertes.component';
+import { PcComponent } from './pc/pc.component';
+import { PerifericsComponent } from './periferics/periferics.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import {RouterOutlet} from "@angular/router";
     CondicionsComponent,
     ContacteComponent,
     RegistreComponent,
+    OfertesComponent,
+    PcComponent,
+    PerifericsComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,4 +39,4 @@ import {RouterOutlet} from "@angular/router";
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
