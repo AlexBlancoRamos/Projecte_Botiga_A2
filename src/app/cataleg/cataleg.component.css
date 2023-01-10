@@ -21,6 +21,10 @@ li{
   text-color: white;
 }
 
+.lateral{
+  margin-left: 10%;
+}
+
 article {
   background-color: white;
   width: 100%;
