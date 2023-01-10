@@ -1,77 +1,7 @@
 
-#titol{
+#titol {
   margin-top: 3%;
   margin-left: 3%;
-
-}
-#fotocistella1{
-  float: left;
-  margin :2%;
-  width: 15%;
-  height: 70%;
-}
-#divproducte1{
-  float: left;
-  margin-top: 2%;
-  margin-left: 3%;
-  border:solid grey 1px;
-  display: inline-block;
-  background-color: white;
-  width: 80%;
-  height:40%;
-}
-#nomproducte{
-  float: left;
-  margin-top: 2%;
-}
-
-#inputpro{
-  margin-left: 55%;
-  float: left;
-  margin-top: 2%;
-}
-
-#preuproducte{
-  float: left;
-  color: red;
-  margin-top: 3%;
-}
-
-#chekbox{
-  margin-top: 12%;
-}
-
-
-#resumen{
-  float: left;
-  margin-top: 2%;
-  margin-left: 1%;
-  border:solid grey 1px;
-  background-color: white;
-  width: 15%;
-  height:40%;
-}
-#resumen1 {
-  margin-left: 7%;
-  margin-top: 7%;
-}
-
-#subtotal {
-  margin-left: 7%;
-  margin-top: 7%;
-  border-bottom: dot-dash grey 1px;
-}
-
-#punts{
-  margin-top: 7%;
-}
-#envio{
-  margin-left: 7%;
-  margin-top: 7%;
-}
-#total{
-  margin-left: 7%;
-  margin-top: 7%;
 }
 
 article{
@@ -84,3 +14,181 @@ article{
   float: left;
   border: solid black 1px;
 }
+
+#producte1 {height: 50%;
+  width: 19%;
+  float: left;
+  text-align: center;}
+#producte1 img {
+  height: 4%;
+  width: 5%;}
+#Preu\ teclat {color:red}
+
+
+
+#producte2 {
+  height: 50%;
+  width: 19%;
+  float: left;
+  text-align: center;}
+#producte2 img {
+  height: 40%;
+  width: 40%;}
+#Preu\ ratoli {color: red}
+
+
+
+#producte3 {
+  height: 50%;
+  width: 19%;
+  float: left;
+  text-align: center;}
+#producte3 img {
+  height: 40%;
+  width: 40%;}
+#Preu\ cascos {color: red}
+
+
+
+#producte4 {
+  height: 50%;
+  width: 19%;
+  float: left;
+  text-align: center;}
+#producte4 img {
+  height: 40%;
+  width: 40%;}
+#Preu\ ram {color: red}
+
+
+
+#producte5 {
+  height: 50%;
+  width: 19%;
+  float: left;
+  text-align: center;}
+#producte5 img {
+  height: 40%;
+  width: 40%;}
+#Preu\ placa {color: red}
+
+
+
+#torre1 {height: 50%;
+  width: 19%;
+  float: left;
+  text-align: center;}
+#torre1 img {
+  height: 40%;
+  width: 40%;}
+#Preu\ torre1 {color:red}
+
+
+
+#torre2 {
+  height: 50%;
+  width: 19%;
+  float: left;
+  text-align: center;}
+#torre2 img {
+  height: 40%;
+  width: 40%;}
+#Preu\ torre2 {color: red}
+
+
+
+#torre3 {
+  height: 50%;
+  width: 19%;
+  float: left;
+  text-align: center;}
+#torre3 img {
+  height: 40%;
+  width: 40%;}
+#Preu\ torre3 {color: red}
+
+
+
+#torre4 {
+  height: 50%;
+  width: 19%;
+  float: left;
+  text-align: center;}
+#torre4 img {
+  height: 40%;
+  width: 40%;}
+#Preu\ torre4 {color: red}
+
+
+
+#torre5 {
+  height: 50%;
+  width: 19%;
+  float: left;
+  text-align: center;}
+#torre5 img {
+  height: 40%;
+  width: 40%;}
+#Preu\ torre5 {color: red}
+
+
+
+
+#periferico1 {height: 50%;
+  width: 19%;
+  float: left;
+  text-align: center;}
+#periferico1 img {
+  height: 40%;
+  width: 40%;}
+#Preu\ periferic1 {color:red}
+
+
+
+#periferico2 {
+  height: 50%;
+  width: 19%;
+  float: left;
+  text-align: center;}
+#periferico2 img {
+  height: 40%;
+  width: 40%;}
+#Preu\ periferic2 {color: red}
+
+
+
+#periferico3 {
+  height: 50%;
+  width: 19%;
+  float: left;
+  text-align: center;}
+#periferico3 img {
+  height: 40%;
+  width: 40%;}
+#Preu\ periferic3 {color: red}
+
+
+
+#periferico4 {
+  height: 50%;
+  width: 19%;
+  float: left;
+  text-align: center;}
+#periferico4 img {
+  height: 40%;
+  width: 40%;}
+#Preu\ periferic4 {color: red}
+
+
+
+#periferico5 {
+  height: 50%;
+  width: 19%;
+  float: left;
+  text-align: center;}
+#periferico5 img {
+  height: 40%;
+  width: 40%;}
+#Preu\ periferic5 {color: red}
+
+
