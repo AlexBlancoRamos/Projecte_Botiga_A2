@@ -1,0 +1,47 @@
+<app-menu></app-menu>
+<div id="menu">
+  <h1>Categories: </h1>
+  <ul>
+    <li class="navega"><a routerLink="/cataleg" routerLinkActive="active" >Totes</a></li>
+    <li class="navega" ><a class="lateral" routerLink="/ofertes" routerLinkActive="active" >Ofertes</a></li>
+    <li class="navega" ><a class="lateral" routerLink="/pc" routerLinkActive="active" >Pc Sobretaula</a></li>
+    <li class="navega" ><a class="lateral" routerLink="/periferics" routerLinkActive="active" >Periferics</a></li>
+  </ul></div>
+
+<div id="componentspc">
+  <div id="divperifericos">
+    <h1 id="perifericos">Perifericos</h1>
+    <div id="periferico1">
+      <img src="../../assets/fotos/periferic1.png">
+      <p> Logitech Brio Webcam 4k UltraHD</p>
+      <p id="Preu periferic1">155,99</p>
+      <button id="pe1" (click)="toggle($event)">Añadir al carrito</button>
+    </div>
+    <div id="periferico2">
+      <img src="../../assets/fotos/periferic2.png">
+      <p>Pack Razer</p>
+      <p id="Preu periferic2">99,97</p>
+      <button id="pe2" (click)="toggle($event)">Añadir al carrito</button>
+    </div>
+    <div id="periferico3">
+      <img src="../../assets/fotos/periferic3.png">
+      <p>Razer Barracuda X Auriculares Gaming</p>
+      <p id="Preu periferic3">69,99</p>
+      <button id="pe3" (click)="toggle($event)">Añadir al carrito</button>
+    </div>
+    <div id="periferico4">
+      <img src="../../assets/fotos/periferic4.png">
+      <p>Razer Huntsman Tournament Edition</p>
+      <p id="Preu periferic4">198,99</p>
+      <button id="pe4" (click)="toggle($event)">Añadir al carrito</button>
+    </div>
+    <div id="periferico5">
+      <img src="../../assets/fotos/periferic5.png">
+      <p>Razer Seiren Mini</p>
+      <p id="Preu periferic5">39,98</p>
+      <button id="pe5" (click)="toggle($event)">Añadir al carrito</button>
+    </div>
+  </div>
+
+</div>
+<app-peu></app-peu>

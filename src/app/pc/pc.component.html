@@ -1,0 +1,45 @@
+<app-menu></app-menu>
+<div id="menu">
+  <h1>Categories: </h1>
+  <ul>
+    <li class="navega"><a routerLink="/cataleg" routerLinkActive="active" >Totes</a></li>
+    <li class="navega" ><a class="lateral" routerLink="/ofertes" routerLinkActive="active" >Ofertes</a></li>
+    <li class="navega" ><a class="lateral" routerLink="/pc" routerLinkActive="active" >Pc Sobretaula</a></li>
+    <li class="navega" ><a class="lateral" routerLink="/periferics" routerLinkActive="active" >Periferics</a></li>
+  </ul></div>
+
+<div id="divpc">
+  <div id="divtorres">
+    <h1 id="pc">Ordenadores de sobremesa</h1>
+    <div id="torre1">
+      <img src="../../assets/fotos/torre1.png">
+      <p>Pc Racing AMD Ryzen 5</p>
+      <p id="Preu torre1">593,95</p>
+      <button id="t1" (click)="toggle($event)">Añadir al carrito</button>
+    </div>
+    <div id="torre2">
+      <img src="../../assets/fotos/torre2.png">
+      <p>PcVIP Devaron AMD Ryzen5</p>
+      <p id="Preu torre2">1099,98</p>
+      <button id="t2" (click)="toggle($event)">Añadir al carrito</button>
+    </div>
+    <div id="torre3">
+      <img src="../../assets/fotos/torre3.png">
+      <p>Nitroppc AMD Ryzen 3</p>
+      <p id="Preu torre3">535,52</p>
+      <button id="t3" (click)="toggle($event)">Añadir al carrito</button>
+    </div>
+    <div id="torre4">
+      <img src="../../assets/fotos/torre4.png">
+      <p>PcVIP Ithor Intel Core 5</p>
+      <p id="Preu torre4">899,89</p>
+      <button id="t4" (click)="toggle($event)">Añadir al carrito</button>
+    </div>
+    <div id="torre5">
+      <img src="../../assets/fotos/torre5.png">
+      <p>Eoical-Q Praetorian II EVO</p>
+      <p id="Preu torre5">789,90</p>
+      <button id="t5" (click)="toggle($event)">Añadir al carrito</button>
+    </div>
+  </div>
+<app-peu></app-peu>

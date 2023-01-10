@@ -1,0 +1,44 @@
+<app-menu></app-menu>
+<div id="menu">
+  <h1>Categories: </h1>
+  <ul>
+    <li class="navega"><a routerLink="/cataleg" routerLinkActive="active" >Totes</a></li>
+    <li class="navega" ><a class="lateral" routerLink="/ofertes" routerLinkActive="active" >Ofertes</a></li>
+    <li class="navega" ><a class="lateral" routerLink="/pc" routerLinkActive="active" >Pc Sobretaula</a></li>
+    <li class="navega" ><a class="lateral" routerLink="/periferics" routerLinkActive="active" >Periferics</a></li>
+  </ul></div>
+
+<div id="divoferta">
+  <h1 id="oferta">En oferta</h1>
+  <div id="producte1">
+    <img src="../../assets/fotos/teclat1.png">
+    <p>Corsair K60 Pro</p>
+    <p id="Preu teclat">49,99</p>
+    <button id="p1" (click)="toggle($event)">Añadir al carrito</button>
+  </div>
+  <div id="producte2">
+    <img src="../../assets/fotos/ratoli1.png">
+    <p>Corsarir Harpoon RGB Pro</p>
+    <p id="Preu ratoli">32,97</p>
+    <button id="p2" (click)="toggle($event)">Añadir al carrito</button>
+  </div>
+  <div id="producte3">
+    <img src="../../assets/fotos/cascos1.png">
+    <p>Xaomi Redmi Buds 3</p>
+    <p id="Preu cascos">21,99</p>
+    <button id="p3" (click)="toggle($event)">Añadir al carrito</button>
+  </div>
+  <div id="producte4">
+    <img src="../../assets/fotos/ram1.png">
+    <p>Corsair Vengance LPX DDR4</p>
+    <p id="Preu ram">61,99</p>
+    <button id="p4" (click)="toggle($event)">Añadir al carrito</button>
+  </div>
+  <div id="producte5">
+    <img src="../../assets/fotos/placabase1.png">
+    <p>MSI PRO B660M-A DDR4</p>
+    <p id="Preu placa">153,04</p>
+    <button id="p5" (click)="toggle($event)">Añadir al carrito</button>
+  </div>
+</div>
+<app-peu></app-peu>

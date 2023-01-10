@@ -1,0 +1,88 @@
+#menu ul{
+  width: 10%;
+  list-style: none;
+  justify-content: space-around;
+  padding: 0px;
+  background-color:white;
+}
+
+ul{background-color:black;}
+
+a{display:block;
+  text-decoration:none;
+  color:black;}
+
+li{
+  flex-grow: 1;
+}
+.navega:hover  {
+  text-decoration:none;
+  background-color:red;
+  text-color: white;
+}
+
+.lateral{
+  margin-left: 10%;
+}
+
+#perifericos{
+  margin-bottom: 3%;
+  margin-top: 3%;
+}
+
+#periferico1 {height: 50%;
+  width: 19%;
+  float: left;
+  text-align: center;}
+#periferico1 img {
+  height: 40%;
+  width: 40%;}
+#Preu\ periferic1 {color:red}
+
+
+
+#periferico2 {
+  height: 50%;
+  width: 19%;
+  float: left;
+  text-align: center;}
+#periferico2 img {
+  height: 40%;
+  width: 40%;}
+#Preu\ periferic2 {color: red}
+
+
+
+#periferico3 {
+  height: 50%;
+  width: 19%;
+  float: left;
+  text-align: center;}
+#periferico3 img {
+  height: 40%;
+  width: 40%;}
+#Preu\ periferic3 {color: red}
+
+
+
+#periferico4 {
+  height: 50%;
+  width: 19%;
+  float: left;
+  text-align: center;}
+#periferico4 img {
+  height: 40%;
+  width: 40%;}
+#Preu\ periferic4 {color: red}
+
+
+
+#periferico5 {
+  height: 50%;
+  width: 19%;
+  float: left;
+  text-align: center;}
+#periferico5 img {
+  height: 40%;
+  width: 40%;}
+#Preu\ periferic5 {color: red}

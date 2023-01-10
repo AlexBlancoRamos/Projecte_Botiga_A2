@@ -1,0 +1,88 @@
+#menu ul{
+  width: 10%;
+  list-style: none;
+  justify-content: space-around;
+  padding: 0px;
+  background-color:white;
+}
+
+ul{background-color:black;}
+
+a{display:block;
+  text-decoration:none;
+  color:black;}
+
+li{
+  flex-grow: 1;
+}
+.navega:hover  {
+  text-decoration:none;
+  background-color:red;
+  text-color: white;
+}
+
+.lateral{
+  margin-left: 10%;
+}
+
+#pc{
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+#torre1 {height: 50%;
+  width: 19%;
+  float: left;
+  text-align: center;}
+#torre1 img {
+  height: 40%;
+  width: 40%;}
+#Preu\ torre1 {color:red}
+
+
+
+#torre2 {
+  height: 50%;
+  width: 19%;
+  float: left;
+  text-align: center;}
+#torre2 img {
+  height: 40%;
+  width: 40%;}
+#Preu\ torre2 {color: red}
+
+
+
+#torre3 {
+  height: 50%;
+  width: 19%;
+  float: left;
+  text-align: center;}
+#torre3 img {
+  height: 40%;
+  width: 40%;}
+#Preu\ torre3 {color: red}
+
+
+
+#torre4 {
+  height: 50%;
+  width: 19%;
+  float: left;
+  text-align: center;}
+#torre4 img {
+  height: 40%;
+  width: 40%;}
+#Preu\ torre4 {color: red}
+
+
+
+#torre5 {
+  height: 50%;
+  width: 19%;
+  float: left;
+  text-align: center;}
+#torre5 img {
+  height: 40%;
+  width: 40%;}
+#Preu\ torre5 {color: red}
