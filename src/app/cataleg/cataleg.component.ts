@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-cataleg',
   templateUrl: './cataleg.component.html',
   styleUrls: ['./cataleg.component.css']
 })
-export class CatalegComponent {
+export class CatalegComponent implements OnInit{
   toggle(event: Event): void {
     let elementId: string = (event.target as Element).id;
 
@@ -46,5 +46,10 @@ export class CatalegComponent {
     }else if (elementId=='pe6') {
       localStorage.setItem("periferico6", document.getElementById('periferico6')!.innerHTML)
     }
+  }
+
+  ngOnInit() {
+
+
   }
 }
