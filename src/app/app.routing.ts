@@ -13,6 +13,7 @@ import { CondicionsComponent } from './condicions/condicions.component';
 import { ContacteComponent } from './contacte/contacte.component';
 import { RegistreComponent } from './registre/registre.component';
 import { RouterOutlet} from "@angular/router";
+import {ContrasenyaComponent} from "./contrasenya/contrasenya.component";
 
 const routes: Routes =[
   {path: '', redirectTo: '/inici', pathMatch: 'full'},
@@ -27,6 +28,7 @@ const routes: Routes =[
   {path: 'condicions', component: CondicionsComponent},
   {path: 'contacte', component: ContacteComponent},
   {path: 'registre', component: RegistreComponent},
+  {path: 'contrasenya', component: ContrasenyaComponent},
   {path: 'oulet', component: RouterOutlet},
 
 ];

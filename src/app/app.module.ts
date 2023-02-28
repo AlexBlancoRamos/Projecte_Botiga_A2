@@ -15,6 +15,9 @@ import { RouterOutlet} from "@angular/router";
 import { OfertesComponent } from './ofertes/ofertes.component';
 import { PcComponent } from './pc/pc.component';
 import { PerifericsComponent } from './periferics/periferics.component';
+import { ContrasenyaComponent } from './contrasenya/contrasenya.component';
+import {HttpClientModule} from "@angular/common/http";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -30,11 +33,14 @@ import { PerifericsComponent } from './periferics/periferics.component';
     OfertesComponent,
     PcComponent,
     PerifericsComponent,
+    ContrasenyaComponent,
   ],
   imports: [
     BrowserModule,
     RouterOutlet,
-    routing
+    routing,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

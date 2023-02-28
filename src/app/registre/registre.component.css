@@ -35,7 +35,7 @@ input[type="text"], input[type="password"] {
   font-size:15px;
   transition: 0.2s ease;
 }
-input[type="submit"] {
+button[type="submit"] {
   margin-bottom:28px;
   width:120px;
   height:32px;
@@ -49,7 +49,7 @@ input[type="submit"] {
   transition:0.25s ease;
   cursor:pointer;
 }
-input[type="submit"]:hover,input[type="submit"]:focus {
+button[type="submit"]:hover,input[type="submit"]:focus {
   background:#ff5722;
   transition: 0.2s ease;
 }
@@ -113,4 +113,19 @@ article{
   background-color: white;
   float: left;
   border: solid black 1px;
+}
+
+#Repetircontra {
+  text-decoration:none;
+  font-weight: 6;
+  font-size: 15px;
+  color:#ffffff;
+  padding-top:15px;
+  padding-bottom:15px;
+  padding-left:40px;
+  padding-right:40px;
+  background-color:red;
+  border-color: #f2595e;
+  border-width: 2px;
+  border-style: solid;
 }

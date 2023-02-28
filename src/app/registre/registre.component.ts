@@ -1,70 +1,53 @@
 import { Component,OnInit } from '@angular/core';
+import {HttpClient, HttpParams} from "@angular/common/http";
 
 @Component({
   selector: 'app-registre',
   templateUrl: './registre.component.html',
   styleUrls: ['./registre.component.css']
 })
+
 export class RegistreComponent implements OnInit{
 
-  constructor() {
+  nom: string='';
+  email: string='';
+  contra: string='';
+  email_login: string='';
+  contra_login: string='';
+
+  constructor(private http: HttpClient) {
+
   }
 
   ngOnInit(){
-    let boto_registro = document.getElementById("enviaregistro")
-    //@ts-ignore
-    boto_registro.onclick = function registre(){
-      let nom;
-      let con;
-      //@ts-ignore
-      nom = document.getElementById("nomregistro").value;
-      //@ts-ignore
-      con = document.getElementById("conregistro").value;
 
-      localStorage.setItem("nombre",nom)
-      localStorage.setItem("contraseña",con)
+  }
 
-      //@ts-ignore
-      document.getElementById("nomregistro").reset
+  enviaregistro(){
+    this.http.post<any>("http://172.16.5.1:3080/registre" , {nom: this.nom, email: this.email, contra: this.contra}).subscribe();
+  }
 
-      //let formulario = document.getElementById("left-box")
-      //@ts-ignore
-      //left-box.reset();
+  enviarlogin(){
 
+    var resultat: Object =false;
+    let req = new HttpParams().set('email',this.email_login);
+    let req2 = new HttpParams().set('contra',this.contra_login);
+    this.http.get("http://172.16.5.1:3080/inicisessio", {params: req}).subscribe((client)=>{
+      resultat=client;
+      console.log(resultat);
+      if(resultat==true){
+        this.http.get("http://172.16.5.1:3080/contrasenya", {params: req2}).subscribe((client)=> {
+          resultat = client;
+          console.log(resultat);
+          if(resultat == true){
+            alert("Inicio correcto")
 
-      let boto_inicio = document.getElementById("enviarinici")
-      //@ts-ignore
-      boto_inicio.onclick = function inici(){
-        let nom1;
-        let contrasenya1;
-        //@ts-ignore
-        nom1 = document.getElementById("nominici").value;
-        //@ts-ignore
-        contrasenya1 = document.getElementById("coninici").value;
-
-        let comprobar_nom = localStorage.getItem("nombre")
-        let comprobar_pass = localStorage.getItem("contraseña")
-
-        if ((nom1==comprobar_nom)&&(contrasenya1==comprobar_pass)){
-          let correcte = localStorage.setItem("nombre",nom1)
-          alert("Inici de sessió correcte")
-          return true;
-        }
-        else{
-          alert("Inici de sessió incorrecte")
-          return false;
-        }
-
-      }
-
-      // @ts-ignore
-      document.getElementById("nomregistro").value = '';
-      // @ts-ignore
-      document.getElementById("emailregistro").value = '';
-      // @ts-ignore
-      document.getElementById("conregistro").value = '';
-      // @ts-ignore
-      document.getElementById("con2registro").value = '';
-    }
+          }
+          else{
+            alert("Fallo de contraseña")}
+        })
+      }else{
+        alert("Fallo de email")}
+    })
   }
 }
