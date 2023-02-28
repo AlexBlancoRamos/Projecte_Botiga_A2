@@ -1,0 +1,13 @@
+<app-menu></app-menu>
+<article>
+  <div id="login-box">
+    <div class="right-box">
+      <form (submit)="enviar()" ngNativeValidate>
+        <h1>Afegeix un correu i usuari per la contrasenya</h1>
+        <input [(ngModel)]="email" [ngModelOptions]="{standalone:true}" type="email" class="form-control" name='email' id="email" placeholder="email..." required />
+      <button id="enviarinci" type="submit" >Enviar</button>
+      </form>
+    </div>
+  </div>
+</article>
+<app-peu></app-peu>
