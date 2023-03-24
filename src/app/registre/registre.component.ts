@@ -1,26 +1,43 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,OnInit, } from '@angular/core';
 import {HttpClient, HttpParams} from "@angular/common/http";
+
+export interface FormModel {
+  captcha?: string;
+}
 
 @Component({
   selector: 'app-registre',
   templateUrl: './registre.component.html',
-  styleUrls: ['./registre.component.css']
+  styleUrls: ['./registre.component.css'],
+
 })
 
 export class RegistreComponent implements OnInit{
 
+  public formModel: FormModel = {};
   nom: string='';
   email: string='';
   contra: string='';
   email_login: string='';
   contra_login: string='';
 
+  captchaClick = false;
+  captchaClick2 = false;
+
   constructor(private http: HttpClient) {
 
   }
 
-  ngOnInit(){
+  ngOnInit(): void {
 
+  }
+
+  Captcha(){
+    this.captchaClick = true;
+  }
+
+  Captcha2(){
+    this.captchaClick2 = true;
   }
 
   enviaregistro(){
@@ -28,7 +45,6 @@ export class RegistreComponent implements OnInit{
   }
 
   enviarlogin(){
-
     var resultat: Object =false;
     let req = new HttpParams().set('email',this.email_login);
     let req2 = new HttpParams().set('contra',this.contra_login);
@@ -50,4 +66,5 @@ export class RegistreComponent implements OnInit{
         alert("Fallo de email")}
     })
   }
+
 }
