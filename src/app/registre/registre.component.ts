@@ -15,7 +15,11 @@ export interface FormModel {
 export class RegistreComponent implements OnInit{
 
   public formModel: FormModel = {};
+  texto:any;
+  text:any;
+  accio:any;
   nom: string='';
+  NomUser:string='';
   email: string='';
   contra: string='';
   email_login: string='';
@@ -42,6 +46,7 @@ export class RegistreComponent implements OnInit{
 
   enviaregistro(){
     this.http.post<any>("http://172.16.5.1:3080/registre" , {nom: this.nom, email: this.email, contra: this.contra}).subscribe();
+    this.registre()
   }
 
   enviarlogin(){
@@ -57,6 +62,12 @@ export class RegistreComponent implements OnInit{
           console.log(resultat);
           if(resultat == true){
             alert("Inicio correcto")
+            let nom1;
+            // @ts-ignore
+            nom1 = document.getElementById("nominici").value;
+            let comprobar_nom = localStorage.getItem("nombre")
+            let correcte = localStorage.setItem("nombre",nom1)
+            this.Login()
 
           }
           else{
@@ -66,5 +77,29 @@ export class RegistreComponent implements OnInit{
         alert("Fallo de email")}
     })
   }
+
+  registre(){
+
+    this.http.post<any>('http://172.16.5.1:3080/registres',{
+      text: `  S'ha registrat amb l'usuari: ${this.nom}  i correu: ${this.email}`
+
+    }).subscribe();
+    alert("Enviat!");
+    this.nom = '';
+    this.email = '';
+
+  }
+
+  Login(){
+
+    this.http.post<any>('http://172.16.5.1:3080/login',{
+      texto: `  A iniciat sessio amb el correu: ${this.email_login}  i contrasenya: ${this.contra_login}`
+
+    }).subscribe();
+    this.email_login = '';
+    this.contra_login = '';
+
+  }
+
 
 }

@@ -130,3 +130,11 @@ li{
   background-color:white;
   border: solid black 1px;
 }
+
+.form-inline{
+  height: 10px;
+  width: 300px;
+  margin-left: 600px;
+  margin-top: 20px;
+}
+

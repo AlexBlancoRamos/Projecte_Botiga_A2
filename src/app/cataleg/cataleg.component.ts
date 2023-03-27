@@ -1,11 +1,30 @@
 import {Component, OnInit} from '@angular/core';
+import {HttpClient, HttpParams} from "@angular/common/http";
 
 @Component({
   selector: 'app-cataleg',
   templateUrl: './cataleg.component.html',
-  styleUrls: ['./cataleg.component.css']
+  styleUrls: ['./cataleg.component.css'],
+
 })
 export class CatalegComponent implements OnInit{
+  text:any;
+  mostrar:any;
+  currentRate1 = 8;
+  currentRate2 = 8;
+  currentRate3 = 8;
+  currentRate4 = 8;
+  currentRate5 = 8;
+  currentRate6 = 8;
+  currentRate7 = 8;
+  currentRate8 = 8;
+  currentRate9 = 8;
+  currentRate10 = 8;
+  currentRate11 = 8;
+  currentRate12 = 8;
+  currentRate13 = 8;
+  currentRate14 = 8;
+  currentRate15 = 8;
   toggle(event: Event): void {
     let elementId: string = (event.target as Element).id;
 
@@ -46,10 +65,23 @@ export class CatalegComponent implements OnInit{
     }else if (elementId=='pe6') {
       localStorage.setItem("periferico6", document.getElementById('periferico6')!.innerHTML)
     }
+
+
+    this.http.post<any>('http://172.16.5.1:3080/cesta',{
+      text: `  L'usuari: ${this.mostrar}  a afegit a la cesta ${elementId}`
+    }).subscribe((a)=>{
+      alert('hola')
+
+    });
+
   }
 
   ngOnInit() {
-
+    this.mostrar = localStorage.getItem("nombre")
+  }
+  constructor(private http: HttpClient) {
 
   }
+
+
 }

@@ -19,6 +19,7 @@ import { PerifericsComponent } from './periferics/periferics.component';
 import { ContrasenyaComponent } from './contrasenya/contrasenya.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
+import {NgbRating, NgbModule} from "@ng-bootstrap/ng-bootstrap";
 
 
 @NgModule({
@@ -37,15 +38,17 @@ import {FormsModule} from "@angular/forms";
     PerifericsComponent,
     ContrasenyaComponent,
   ],
-  imports: [
-    BrowserModule,
-    RouterOutlet,
-    routing,
-    HttpClientModule,
-    FormsModule,
-    RecaptchaModule,
-    RecaptchaFormsModule
-  ],
+    imports: [
+        BrowserModule,
+        RouterOutlet,
+        routing,
+        HttpClientModule,
+        FormsModule,
+        RecaptchaModule,
+        RecaptchaFormsModule,
+        NgbRating,
+        NgbModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
