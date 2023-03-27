@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-menu',
@@ -7,19 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit{
 
+  texto:any;
   mostrar: any;
 
-  constructor() {
+
+  constructor(private http: HttpClient) {
+
   }
 
   ngOnInit() {
     this.mostrar = localStorage.getItem("nombre")
 
     //@ts-ignore
-    logout_borrar.onclick = function clear(){
+    logout_borrar.onclick = function clear() {
+
+       this.http.post<any>('http://172.16.5.1:3080/logout',{
+         texto: `  L'usuari: ${this.mostrar}  a tencat la sessio `
+       }).subscribe();
       window.localStorage.clear()
       alert("Inici de sessió tancat")
     }
   }
-
 }
+
+

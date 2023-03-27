@@ -24,5 +24,14 @@
 
 
   </div>
+    <div>
+      <form (submit)="enviaFormulari()">
+        <p>El teu nom??</p>
+        <input type="text" [(ngModel)]="NomUser" [ngModelOptions]="{standalone: true}" placeholder="Nom d'usuari">
+        <p>Tens alguna recomanacio per la pagina web??</p>
+        <input type="text" [(ngModel)]="Recomanacio" [ngModelOptions]="{standalone: true}" placeholder="Afegeix una recomanacio">
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
 </article>
 <app-peu></app-peu>

@@ -6,7 +6,7 @@
 <article>
   <div id="login-box">
     <div class="left-box">
-      <form (submit)="enviaregistro()" ngNativeValidate #captchaProtectedForm="ngForm" >
+      <form (submit)="enviaregistro()"  ngNativeValidate #captchaProtectedForm="ngForm" >
         <h1> Sign Up </h1>
         <input id="nomregistro" [ngModelOptions]="{standalone:true}" type="text" name="username" placeholder="Username"  [(ngModel)]="nom" required />
         <input id="emailregistro" [ngModelOptions]="{standalone:true}" type="text" name="email" placeholder="Email"  [(ngModel)]="email" required/>

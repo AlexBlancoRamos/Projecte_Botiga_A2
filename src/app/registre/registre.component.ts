@@ -57,12 +57,6 @@ export class RegistreComponent implements OnInit{
           console.log(resultat);
           if(resultat == true){
             alert("Inicio correcto")
-            let nom1;
-            // @ts-ignore
-            nom1 = document.getElementById("nominici").value;
-            let comprobar_nom = localStorage.getItem("nombre")
-            let correcte = localStorage.setItem("nombre",nom1)
-            window.location.reload();
 
           }
           else{
