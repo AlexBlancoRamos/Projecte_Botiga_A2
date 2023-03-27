@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {HttpClient, HttpParams} from "@angular/common/http";
 
 @Component({
+
   selector: 'app-cataleg',
   templateUrl: './cataleg.component.html',
   styleUrls: ['./cataleg.component.css'],
