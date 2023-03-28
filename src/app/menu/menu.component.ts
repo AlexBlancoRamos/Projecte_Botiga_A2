@@ -22,11 +22,13 @@ export class MenuComponent implements OnInit{
     //@ts-ignore
     logout_borrar.onclick = function clear() {
 
-       this.http.post<any>('http://172.16.5.1:3080/logout',{
-         texto: `  L'usuari: ${this.mostrar}  a tencat la sessio `
-       }).subscribe();
       window.localStorage.clear()
       alert("Inici de sessió tancat")
+      window.location.reload();
+       this.http.post<any>('http://172.16.5.1:3080/logout',{
+         texto: `  L'usuari a tencat la sessio `
+       }).subscribe()
+
     }
   }
 }

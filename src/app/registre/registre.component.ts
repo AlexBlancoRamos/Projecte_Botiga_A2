@@ -68,7 +68,7 @@ export class RegistreComponent implements OnInit{
             this.Login()
 
             alert("Inicio correcto")
-
+            window.location.reload();
           }
           else{
             alert("Fallo de contraseña")}

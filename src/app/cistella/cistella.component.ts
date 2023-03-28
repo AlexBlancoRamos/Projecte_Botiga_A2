@@ -9,6 +9,7 @@ import {HttpClient} from "@angular/common/http";
 })
 export class CistellaComponent implements OnInit {
   mostrar: any;
+  total: any;
 
   constructor(private http: HttpClient) {
 
@@ -165,7 +166,8 @@ export class CistellaComponent implements OnInit {
       preu_total = preu_total + x
     }
     console.log(preu_total)
-
+    // localStorage.setItem("Total", preu_total.toString())
+    this.total=preu_total;
   }
 
   borrar() {
@@ -175,5 +177,6 @@ export class CistellaComponent implements OnInit {
     }).subscribe();
     alert('comprat')
     window.localStorage.clear()
+    window.location.reload();
   }
 }

@@ -9,6 +9,7 @@ import {HttpClient, HttpParams} from "@angular/common/http";
 
 })
 export class CatalegComponent implements OnInit{
+  fotos:any;
   text:any;
   mostrar:any;
   currentRate1 = 8;
@@ -79,6 +80,27 @@ export class CatalegComponent implements OnInit{
 
   ngOnInit() {
     this.mostrar = localStorage.getItem("nombre")
+
+    const fotos={
+      cascos1: "http://172.16.5.1:3080/fotos/cascos1",
+      placabase1: "http://172.16.5.1:3080/fotos/placabase1",
+      ram1: "http://172.16.5.1:3080/fotos/ram1",
+      ratoli1: "http://172.16.5.1:3080/fotos/ratoli1",
+      teclat1: "http://172.16.5.1:3080/fotos/teclat1",
+      periferic1: "http://172.16.5.1:3080/fotos/periferic1",
+      periferic2: "http://172.16.5.1:3080/fotos/periferic2",
+      periferic3: "http://172.16.5.1:3080/fotos/periferic3",
+      periferic4: "http://172.16.5.1:3080/fotos/periferic4",
+      periferic5: "http://172.16.5.1:3080/fotos/periferic5",
+      torre1: "http://172.16.5.1:3080/fotos/torre1",
+      torre2: "http://172.16.5.1:3080/fotos/torre2",
+      torre3: "http://172.16.5.1:3080/fotos/torre3",
+      torre4: "http://172.16.5.1:3080/fotos/torre4",
+      torre5: "http://172.16.5.1:3080/fotos/torre5",
+    }
+
+    this.fotos=[];
+    this.fotos.push(fotos)
   }
   constructor(private http: HttpClient) {
 
