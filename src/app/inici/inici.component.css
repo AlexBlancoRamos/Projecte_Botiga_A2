@@ -63,28 +63,6 @@ li ul {
   text-align: center;
 }
 
-/*.chart-container{*/
-/*  display: inline-block;*/
-/*}*/
-
-#grafic1{
-  display: inline-block;
-  margin-top: 5%;
-  margin-left: 100px;
-  height: 300px;
-  width: 45%;
-  margin-bottom: 125px;
-}
-
-
-#grafic2{
-  display: inline-block;
-  margin-top: 5%;
-  margin-left: 20px;
-  height: 300px;
-  width: 45%;
-  margin-bottom: 125px;
-}
 
 
 
