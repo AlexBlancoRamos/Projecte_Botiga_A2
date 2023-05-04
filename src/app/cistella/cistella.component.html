@@ -1,8 +1,22 @@
 <app-menu></app-menu>
 <article>
   <h1 id="titol">La meva cistella</h1>
+
+  <div *ngFor="let pr of carro; let i = index" id="producte1">
+      <div *ngIf="pr">
+        <img src="{{pr.imatge}}">
+        <p> {{pr.nom}} </p>
+        <p> {{pr.preu}} €</p>
+        <button type="button"(click)="borrar(i)" class="btn btn-outline-dark">Borrar Producto</button>
+      </div>
+    </div>
+
   <code id="subject"></code>
-  <p>Preu final:  {{total}} €</p>
-  <button type="button"(click)="borrar()" class="btn btn-outline-dark">Comprar</button>
+
+  <p>Preu final:  {{preutotal()}} €</p>
+
+  <button *ngIf="carro.length !== 0" type="button"(click)="comprar()" class="btn btn-outline-dark">Comprar</button>
+
 </article>
+
 <app-peu></app-peu>

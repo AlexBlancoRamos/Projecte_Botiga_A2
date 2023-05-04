@@ -14,6 +14,7 @@ import { ContacteComponent } from './contacte/contacte.component';
 import { RegistreComponent } from './registre/registre.component';
 import { RouterOutlet} from "@angular/router";
 import {ContrasenyaComponent} from "./contrasenya/contrasenya.component";
+import {AdministracioComponent} from "./administracio/administracio.component";
 
 const routes: Routes =[
   {path: '', redirectTo: '/inici', pathMatch: 'full'},
@@ -30,6 +31,7 @@ const routes: Routes =[
   {path: 'registre', component: RegistreComponent},
   {path: 'contrasenya', component: ContrasenyaComponent},
   {path: 'oulet', component: RouterOutlet},
+  {path: 'administracio', component: AdministracioComponent}
 
 ];
 export const routing = RouterModule.forRoot(routes);

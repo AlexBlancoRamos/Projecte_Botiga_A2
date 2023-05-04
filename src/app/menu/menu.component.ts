@@ -25,7 +25,7 @@ export class MenuComponent implements OnInit{
       window.localStorage.clear()
       alert("Inici de sessió tancat")
       window.location.reload();
-       this.http.post<any>('http://172.16.5.1:3080/logout',{
+       this.http.post<any>('http://localhost:3080/logout',{
          texto: `  L'usuari a tencat la sessio `
        }).subscribe()
 

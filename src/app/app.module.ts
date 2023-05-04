@@ -20,6 +20,8 @@ import { ContrasenyaComponent } from './contrasenya/contrasenya.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import {NgbRating, NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {DatePipe} from "@angular/common";
+import { AdministracioComponent } from './administracio/administracio.component';
 
 
 @NgModule({
@@ -37,6 +39,7 @@ import {NgbRating, NgbModule} from "@ng-bootstrap/ng-bootstrap";
     PcComponent,
     PerifericsComponent,
     ContrasenyaComponent,
+    AdministracioComponent,
   ],
     imports: [
         BrowserModule,
@@ -49,7 +52,9 @@ import {NgbRating, NgbModule} from "@ng-bootstrap/ng-bootstrap";
         NgbRating,
         NgbModule
     ],
-  providers: [],
+  providers: [
+    DatePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
