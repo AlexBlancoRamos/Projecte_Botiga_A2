@@ -87,6 +87,19 @@ li{
   text-color: white;
 }
 
+.admin{
+  width: 100px;
+  height: 40px;
+  display: flex;
+  float: right;
+}
+
+.admin:hover {
+  text-decoration:none;
+  background-color:red;
+  text-color: white;
+}
+
 
 
 .search-box{

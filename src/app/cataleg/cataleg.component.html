@@ -3,149 +3,30 @@
 </head>
 <app-menu></app-menu>
 <article>
-  <div id="menu">
-    <h1>Categories: </h1>
-    <ul>
-      <li class="navega"><a routerLink="/cataleg" routerLinkActive="active" >Totes</a></li>
-      <li class="navega" ><a class="lateral" routerLink="/ofertes" routerLinkActive="active" >Ofertes</a></li>
-      <li class="navega" ><a class="lateral" routerLink="/pc" routerLinkActive="active" >Pc Sobretaula</a></li>
-      <li class="navega" ><a class="lateral" routerLink="/periferics" routerLinkActive="active" >Periferics</a></li>
-    </ul></div>
+<!--  <div id="menu">-->
+<!--    <h1>Categories: </h1>-->
+<!--    <ul>-->
+<!--      <li class="navega"><a routerLink="/cataleg" routerLinkActive="active" >Totes</a></li>-->
+<!--      <li class="navega" ><a class="lateral" routerLink="/ofertes" routerLinkActive="active" >Ofertes</a></li>-->
+<!--      <li class="navega" ><a class="lateral" routerLink="/pc" routerLinkActive="active" >Pc Sobretaula</a></li>-->
+<!--      <li class="navega" ><a class="lateral" routerLink="/periferics" routerLinkActive="active" >Periferics</a></li>-->
+<!--    </ul></div>-->
 
-  <div id="divoferta">
-    <h1 id="oferta">En oferta</h1>
-    <div id="producte1">
-<!--      <img src="../../assets/fotos/teclat1.png">-->
-      <img [src]="fotos[0].teclat1" >
-      <p>Corsair K60 Pro</p>
-      <p id="Preu teclat">49,99</p>
-      <button id="" (click)="toggle($event)">Añadir al carrito</button><br>
+<!--  <div id="divoferta">-->
+<!--    <h1 id="oferta">En oferta</h1>-->
+
+  <h1> Tenda </h1>
+
+  <div *ngFor="let pr of productes" id="producte1">
+    <div *ngIf="pr">
+      <img src="{{pr.imatge}}">
+      <p> {{pr.nom}}</p>
+      <p> {{pr.preu}} €</p>
+
+      <button id="" (click)="anadircarrito(pr)">Añadir al carrito</button><br>
       <ngb-rating [(rate)]="currentRate1"></ngb-rating>
     </div>
-    <div id="producte2">
-<!--      <img src="../../assets/fotos/ratoli1.png">-->
-      <img [src]="fotos[0].ratoli1" >
-      <p>Corsarir Harpoon RGB Pro</p>
-      <p id="Preu ratoli">32,97</p>
-      <button id="p2" (click)="toggle($event)">Añadir al carrito</button><br>
-      <ngb-rating [(rate)]="currentRate2"></ngb-rating>
-    </div>
-    <div id="producte3">
-<!--      <img src="../../assets/fotos/cascos1.png">-->
-      <img [src]="fotos[0].cascos1" >
-      <p>Xaomi Redmi Buds 3</p>
-      <p id="Preu cascos">21,99</p>
-      <button id="p3" (click)="toggle($event)">Añadir al carrito</button><br>
-      <ngb-rating [(rate)]="currentRate3"></ngb-rating>
-    </div>
-    <div id="producte4">
-<!--      <img src="../../assets/fotos/ram1.png">-->
-      <img [src]="fotos[0].ram1" >
-      <p>Corsair Vengance LPX DDR4</p>
-      <p id="Preu ram">61,99</p>
-      <button id="p4" (click)="toggle($event)">Añadir al carrito</button><br>
-      <ngb-rating [(rate)]="currentRate4"></ngb-rating>
-    </div>
-    <div id="producte5">
-<!--      <img src="../../assets/fotos/placabase1.png">-->
-      <img [src]="fotos[0].placabase1" >
-      <p>MSI PRO B660M-A DDR4</p>
-      <p id="Preu placa">153,04</p>
-      <button id="p5" (click)="toggle($event)">Añadir al carrito</button><br>
-      <ngb-rating [(rate)]="currentRate5"></ngb-rating>
-    </div>
   </div>
-  <div id="divpc">
-    <div id="divtorres">
-      <h1 id="pc">Ordenadores de sobremesa</h1>
-      <div id="torre1">
-<!--        <img src="../../assets/fotos/torre1.png">-->
-        <img [src]="fotos[0].torre1" >
-        <p>Pc Racing AMD Ryzen 5</p>
-        <p id="Preu torre1">593,95</p>
-        <button id="t1" (click)="toggle($event)">Añadir al carrito</button><br>
-        <ngb-rating [(rate)]="currentRate6"></ngb-rating>
-      </div>
-      <div id="torre2">
-<!--        <img src="../../assets/fotos/torre2.png">-->
-        <img [src]="fotos[0].torre2" >
-        <p>PcVIP Devaron AMD Ryzen5</p>
-        <p id="Preu torre2">1099,98</p>
-        <button id="t2" (click)="toggle($event)">Añadir al carrito</button><br>
-        <ngb-rating [(rate)]="currentRate7"></ngb-rating>
-      </div>
-      <div id="torre3">
-<!--        <img src="../../assets/fotos/torre3.png">-->
-        <img [src]="fotos[0].torre3" >
-        <p>Nitroppc AMD Ryzen 3</p>
-        <p id="Preu torre3">535,52</p>
-        <button id="t3" (click)="toggle($event)">Añadir al carrito</button><br>
-        <ngb-rating [(rate)]="currentRate8"></ngb-rating>
-      </div>
-      <div id="torre4">
-<!--        <img src="../../assets/fotos/torre4.png">-->
-        <img [src]="fotos[0].torre4" >
-        <p>PcVIP Ithor Intel Core 5</p>
-        <p id="Preu torre4">899,89</p>
-        <button id="t4" (click)="toggle($event)">Añadir al carrito</button><br>
-        <ngb-rating [(rate)]="currentRate9"></ngb-rating>
-      </div>
-      <div id="torre5">
-<!--        <img src="../../assets/fotos/torre5.png">-->
-        <img [src]="fotos[0].torre5" >
-        <p>Eoical-Q Praetorian II EVO</p>
-        <p id="Preu torre5">789,90</p>
-        <button id="t5" (click)="toggle($event)">Añadir al carrito</button><br>
-        <ngb-rating [(rate)]="currentRate10"></ngb-rating>
-      </div>
-    </div>
 
-  </div>
-  <div id="componentspc">
-    <div id="divperifericos">
-      <h1 id="perifericos">Perifericos</h1>
-      <div id="periferico1">
-<!--        <img src="../../assets/fotos/periferic1.png">-->
-        <img [src]="fotos[0].periferic1" >
-        <p> Logitech Brio Webcam 4k UltraHD</p>
-        <p id="Preu periferic1">155,99</p>
-        <button id="pe1" (click)="toggle($event)">Añadir al carrito</button><br>
-        <ngb-rating [(rate)]="currentRate11"></ngb-rating>
-      </div>
-      <div id="periferico2">
-<!--        <img src="../../assets/fotos/periferic2.png">-->
-        <img [src]="fotos[0].periferic2" >
-        <p>Pack Razer</p>
-        <p id="Preu periferic2">99,97</p>
-        <button id="pe2" (click)="toggle($event)">Añadir al carrito</button><br>
-        <ngb-rating [(rate)]="currentRate12"></ngb-rating>
-      </div>
-      <div id="periferico3">
-<!--        <img src="../../assets/fotos/periferic3.png">-->
-        <img [src]="fotos[0].periferic3" >
-        <p>Razer Barracuda X Auriculares Gaming</p>
-        <p id="Preu periferic3">69,99</p>
-        <button id="pe3" (click)="toggle($event)">Añadir al carrito</button><br>
-        <ngb-rating [(rate)]="currentRate13"></ngb-rating>
-      </div>
-      <div id="periferico4">
-<!--        <img src="../../assets/fotos/periferic4.png">-->
-        <img [src]="fotos[0].periferic4" >
-        <p>Razer Huntsman Tournament Edition</p>
-        <p id="Preu periferic4">198,99</p>
-        <button id="pe4" (click)="toggle($event)">Añadir al carrito</button><br>
-        <ngb-rating [(rate)]="currentRate14"></ngb-rating>
-      </div>
-      <div id="periferico5">
-<!--        <img src="../../assets/fotos/periferic5.png">-->
-        <img [src]="fotos[0].periferic5" >
-        <p>Razer Seiren Mini</p>
-        <p id="Preu periferic5">39,98</p>
-        <button id="pe5" (click)="toggle($event)">Añadir al carrito</button><br>
-        <ngb-rating [(rate)]="currentRate15"></ngb-rating>
-      </div>
-    </div>
-
-  </div>
 </article>
 <app-peu></app-peu>

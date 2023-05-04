@@ -13,7 +13,7 @@ constructor(private http:HttpClient) {
 }
 
 enviar(){
-   this.http.post("http://172.16.5.1:3080/api/sendemail",{name:'user', email:this.email,subject:"Nova contrasenya",message:"text de prov"}).subscribe((client) => {
+   this.http.post("http://localhost:3080/api/sendemail",{name:'user', email:this.email,subject:"Nova contrasenya",message:"text de prov"}).subscribe((client) => {
    console.log(client);
    })
   alert('Correu enviat')
