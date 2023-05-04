@@ -21,6 +21,8 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import {NgbRating, NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {NgChartsModule} from "ng2-charts";
+import {DatePipe} from "@angular/common";
+import { AdministracioComponent } from './administracio/administracio.component';
 
 
 @NgModule({
@@ -38,6 +40,7 @@ import {NgChartsModule} from "ng2-charts";
     PcComponent,
     PerifericsComponent,
     ContrasenyaComponent,
+    AdministracioComponent,
   ],
   imports: [
     NgApexchartsModule,
@@ -52,7 +55,9 @@ import {NgChartsModule} from "ng2-charts";
     NgbModule,
     NgChartsModule
   ],
-  providers: [],
+  providers: [
+    DatePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -39,24 +39,22 @@ export class RegistreComponent implements OnInit{
     this.captchaClick = true;
   }
 
-  Captcha2(){
-    this.captchaClick2 = true;
-  }
 
   enviaregistro(){
-    this.http.post<any>("http://172.16.5.1:3080/registre" , {nom: this.nom, email: this.email, contra: this.contra}).subscribe();
+    this.http.post<any>("http://localhost:3080/registre" , {nom: this.nom, email: this.email, contra: this.contra}).subscribe();
     this.registres()
   }
 
   enviarlogin(){
+    var rol = '';
     var resultat: Object =false;
     let req = new HttpParams().set('email',this.email_login);
     let req2 = new HttpParams().set('contra',this.contra_login);
-    this.http.get("http://172.16.5.1:3080/inicisessio", {params: req}).subscribe((client)=>{
+    this.http.get("http://localhost:3080/inicisessio", {params: req}).subscribe((client)=>{
       resultat=client;
       console.log(resultat);
       if(resultat==true){
-        this.http.get("http://172.16.5.1:3080/contrasenya", {params: req2}).subscribe((client)=> {
+        this.http.get("http://localhost:3080/contrasenya", {params: req2}).subscribe((client)=> {
           resultat = client;
           console.log(resultat);
           if(resultat == true){
@@ -79,7 +77,7 @@ export class RegistreComponent implements OnInit{
   }
   registres(){
 
-    this.http.post<any>('http://172.16.5.1:3080/registres',{
+    this.http.post<any>('http://localhost:3080/registres',{
     text:   `S'ha registrat amb l'usuari: ${this.nom}  i correu: ${this.email}`
 
       }).subscribe();
@@ -91,8 +89,8 @@ export class RegistreComponent implements OnInit{
 
 Login(){
 
-  this.http.post<any>('http://172.16.5.1:3080/login',{
-  texto:   `A iniciat sessio amb el correu: ${this.email_login}  i contrasenya: ${this.contra_login}`
+  this.http.post<any>('http://localhost:3080/login',{
+  texto:   `Ha iniciat sessio amb el correu: ${this.email_login}  i contrasenya: ${this.contra_login}`
 
     }).subscribe();
 this.email_login = '';

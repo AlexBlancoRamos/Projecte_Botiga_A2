@@ -12,7 +12,7 @@ export class ContacteComponent {
   enviaFormulari(){
     console.log(this.NomUser)
     console.log(this.Recomanacio)
-    this.http.post<any>('http://172.16.5.1:3080/contacte',{
+    this.http.post<any>('http://localhost:3080/contacte',{
       nom: this.NomUser,
       recomanacio: this.Recomanacio
 

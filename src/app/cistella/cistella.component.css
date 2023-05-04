@@ -1,3 +1,10 @@
+#producte1 {height: 50%;
+  width: 19%;
+  float: left;
+  text-align: center;}
+#producte1 img {
+  height: 40%;
+  width: 40%;}
 
 #titol {
   margin-top: 3%;
