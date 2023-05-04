@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { routing } from './app.routing';
 import { RecaptchaModule , RecaptchaFormsModule} from 'ng-recaptcha';
-
+import { NgApexchartsModule } from "ng-apexcharts";
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { PeuComponent } from './peu/peu.component';
@@ -20,6 +20,7 @@ import { ContrasenyaComponent } from './contrasenya/contrasenya.component';
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import {NgbRating, NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {NgChartsModule} from "ng2-charts";
 import {DatePipe} from "@angular/common";
 import { AdministracioComponent } from './administracio/administracio.component';
 
@@ -41,17 +42,19 @@ import { AdministracioComponent } from './administracio/administracio.component'
     ContrasenyaComponent,
     AdministracioComponent,
   ],
-    imports: [
-        BrowserModule,
-        RouterOutlet,
-        routing,
-        HttpClientModule,
-        FormsModule,
-        RecaptchaModule,
-        RecaptchaFormsModule,
-        NgbRating,
-        NgbModule
-    ],
+  imports: [
+    NgApexchartsModule,
+    BrowserModule,
+    RouterOutlet,
+    routing,
+    HttpClientModule,
+    FormsModule,
+    RecaptchaModule,
+    RecaptchaFormsModule,
+    NgbRating,
+    NgbModule,
+    NgChartsModule
+  ],
   providers: [
     DatePipe
   ],
