@@ -1,6 +1,10 @@
 import { Component,OnInit, } from '@angular/core';
 import {HttpClient, HttpParams} from "@angular/common/http";
 
+interface Window {
+  ethereum: any;
+}
+
 export interface FormModel {
   captcha?: string;
 }
@@ -11,7 +15,6 @@ export interface FormModel {
   styleUrls: ['./registre.component.css'],
 
 })
-
 export class RegistreComponent implements OnInit{
 
   public formModel: FormModel = {};
@@ -26,6 +29,26 @@ export class RegistreComponent implements OnInit{
   contra_login: string='';
   captchaClick = false;
   captchaClick2 = false;
+
+  abrirMetaMask() {
+    //@ts-ignore
+    if (typeof window.ethereum !== 'undefined') {
+      //@ts-ignore
+      const metaMask = window.ethereum;
+      metaMask
+        .send('eth_requestAccounts')
+        .then((accounts: string[]) => {
+          const cuenta = accounts[0]; // Obtén la primera cuenta del usuario
+          console.log('Sesión iniciada en MetaMask. Cuenta:', cuenta);
+          // Aquí puedes realizar acciones adicionales con la cuenta del usuario
+        })
+        .catch((error: any) => {
+          console.log('Error al iniciar sesión en MetaMask:', error);
+        });
+    } else {
+      console.log('La extensión MetaMask no está instalada');
+    }
+  }
 
   constructor(private http: HttpClient) {
 
@@ -65,7 +88,9 @@ export class RegistreComponent implements OnInit{
             let correcte = localStorage.setItem("nombre",nom1)
             this.Login()
 
+
             alert("Inicio correcto")
+            this.abrirMetaMask();
             window.location.reload();
           }
           else{
@@ -78,24 +103,24 @@ export class RegistreComponent implements OnInit{
   registres(){
 
     this.http.post<any>('http://localhost:3080/registres',{
-    text:   `S'ha registrat amb l'usuari: ${this.nom}  i correu: ${this.email}`
-
-      }).subscribe();
-  alert("Enviat!");
-  this.nom = '';
-  this.email = '';
-
-}
-
-Login(){
-
-  this.http.post<any>('http://localhost:3080/login',{
-  texto:   `Ha iniciat sessio amb el correu: ${this.email_login}  i contrasenya: ${this.contra_login}`
+      text:   `S'ha registrat amb l'usuari: ${this.nom}  i correu: ${this.email}`
 
     }).subscribe();
-this.email_login = '';
-this.contra_login = '';
+    alert("Enviat!");
+    this.nom = '';
+    this.email = '';
 
-}
+  }
+
+  Login(){
+
+    this.http.post<any>('http://localhost:3080/login',{
+      texto:   `Ha iniciat sessio amb el correu: ${this.email_login}  i contrasenya: ${this.contra_login}`
+
+    }).subscribe();
+    this.email_login = '';
+    this.contra_login = '';
+
+  }
 
 }

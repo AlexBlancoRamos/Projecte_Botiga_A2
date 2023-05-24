@@ -22,6 +22,15 @@
     <p> 347603455</p>
     <br><br>
 
+    <p>Equip: </p>
+    <div>
+      <img [src]="user?.picture?.large" alt="User photo" />
+      <p>{{ user?.name?.title }} {{ user?.name?.first }} {{ user?.name?.last }}</p>
+      <p>Age: {{ user?.dob?.age }}</p>
+      <p>Email: {{ user?.email }}</p>
+      <p>Nationality: {{ user?.nat }}</p>
+    </div>
+
 
   </div>
     <div>
