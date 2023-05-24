@@ -2,18 +2,30 @@
 <article>
   <h1 id="titol">La meva cistella</h1>
 
+
   <div *ngFor="let pr of carro; let i = index" id="producte1">
-      <div *ngIf="pr">
-        <img src="{{pr.imatge}}">
-        <p> {{pr.nom}} </p>
-        <p> {{pr.preu}} €</p>
-        <button type="button"(click)="borrar(i)" class="btn btn-outline-dark">Borrar Producto</button>
-      </div>
+    <div *ngIf="pr">
+      <img src="{{ pr.imatge }}">
+      <p>{{ pr.nom }}</p>
+      <p>{{ pr.preu }} €</p>
+      <button type="button" (click)="borrar(i)" class="btn btn-outline-dark">Borrar Producto</button>
+      <!--<button type="button" (click)="obtenerPrecioBTC(pr.preu)">Obtener precio en BTC</button>-->
     </div>
+  </div>
 
   <code id="subject"></code>
 
-  <p>Preu final:  {{preutotal()}} €</p>
+  <select id="moneda"  (change)="seleccionarMoneda($event)">
+    <option value="opcion1">EURO</option>
+    <option value="opcion2">DOLL</option>
+    <option value="opcion3">BTC</option>
+    <option value="opcion4">BNB</option>
+  </select>
+
+  <p>Preu cistella: </p>
+  {{ preuPoducte }} {{simbolMoneda}}
+  <br>
+  <p> Preu moneda actual {{preuActual}} € </p>
 
   <button *ngIf="carro.length !== 0" type="button"(click)="comprar()" class="btn btn-outline-dark">Comprar</button>
 
